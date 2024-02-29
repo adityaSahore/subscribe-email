@@ -7,10 +7,10 @@
     }
   ],
   "routes": [
+    { "handle": "filesystem" },
     {
       "src": "/(.*)",
-      "dest": "/",
-      "handle": "filesystem"
+      "dest": "/public/$1"
     }
   ]
 }
