@@ -50,7 +50,8 @@ app.post("/subscribe", (req, res) => {
 const PORT = 8080;
 app.get("/", (req, res) => {
   res.set({ "Allow-access-Allow-origin": "*" });
-  res.send(`Server is running on port ${PORT}!!!`);
+  //res.send(`Server is running on port ${PORT}!!!`);
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 app.listen(PORT, () => {
